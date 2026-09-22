@@ -1,144 +1,103 @@
-📊 Simple Linear Regression
+# 📊 Simple Linear Regression
 
-A beginner-friendly Machine Learning project that uses Simple Linear Regression to predict placement-related outcomes from a given input.
+A beginner-friendly **Machine Learning project** that uses **Simple Linear Regression** to predict placement-related outcomes from a given input.
 
-📌 Project Overview
+## 📌 Project Overview
 
-Simple Linear Regression is a supervised machine learning algorithm used to model the relationship between one independent variable and one dependent variable.
+Simple Linear Regression is a supervised machine learning algorithm used to model the relationship between **one independent variable** and **one dependent variable**.
 
-In this project, a regression model is trained using placement data and saved as a .pkl file. A simple web application is created using Flask to make predictions using the trained model.
+In this project, a regression model is trained using placement data and saved as a `.pkl` file. A simple web application is created using **Flask** to make predictions using the trained model.
 
-🎯 Objective
+## 🎯 Objective
+
 The main objectives of this project are:
 
-Understand the concept of Simple Linear Regression
+* Understand the concept of Simple Linear Regression
+* Load and work with a dataset using Python
+* Train a Linear Regression model
+* Save the trained model using Pickle
+* Create a simple Flask web application
+* Make predictions through a web interface
 
-Load and work with a dataset using Python
+## 🛠️ Technologies Used
 
-Train a Linear Regression model
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Scikit-learn**
+* **Flask**
+* **Pickle**
+* **HTML/CSS**
 
-Save the trained model using Pickle
+## 📂 Project Structure
 
-Create a simple Flask web application
-
-Make predictions through a web interface
-
-🛠️ Technologies Used
-
-Python
-
-Pandas
-
-NumPy
-
-Scikit-learn
-
-Flask
-
-Pickle
-
-HTML/CSS
-
-📂 Project Structure
-
+```text
 Simple-Linear-Regression/
-
 │
-
 ├── templates/
-
-│             └── index.html
-
+│   └── index.html
 │
-
 ├── Placement.csv
-
 ├── SLRModel.pkl
-
 ├── app.py
-
 └── README.md
+```
 
-📄 File Description
+### 📄 File Description
 
-File	Description
+| File            | Description                               |
+| --------------- | ----------------------------------------- |
+| `Placement.csv` | Dataset used for training/testing         |
+| `SLRModel.pkl`  | Saved trained Linear Regression model     |
+| `app.py`        | Flask application for prediction          |
+| `templates/`    | Contains HTML files for the web interface |
+| `README.md`     | Project documentation                     |
 
-Placement.csv	Dataset used for training/testing
+## 🔄 How the Project Works
 
-SLRModel.pkl	Saved trained Linear Regression model
-
-app.py	Flask application for prediction
-
-templates/	Contains HTML files for the web interface
-
-README.md	Project documentation
-
-🔄 How the Project Works
-
+```text
 Dataset
-
    ↓
-
 Data Preprocessing
-
    ↓
-
 Train Linear Regression Model
-
    ↓
-
 Save Model
-
    ↓
-
 Load Model in Flask
-   
    ↓
-
 User Enters Input
-   
    ↓
-
 Model Makes Prediction
-   
    ↓
-
 Prediction Displayed
+```
 
-📈 Simple Linear Regression
+## 📈 Simple Linear Regression
 
 The basic equation of Simple Linear Regression is:
 
+```text
 y = mx + c
+```
 
 Where:
 
-y = predicted output
-
-x = input feature
-
-m = slope/coefficient
-
-c = intercept
+* `y` = predicted output
+* `x` = input feature
+* `m` = slope/coefficient
+* `c` = intercept
 
 The model learns the relationship between the input and output from the training data.
 
-
-💡 Key Learning Outcomes
+## 💡 Key Learning Outcomes
 
 Through this project, I learned:
 
-
-Basics of supervised learning
-
-Simple Linear Regression
-
-Training a machine learning model
-
-Making predictions using Scikit-learn
-
-Saving and loading ML models using Pickle
-
-Connecting a machine learning model with Flask
-
-Creating a basic ML web application
+* Basics of supervised learning
+* Simple Linear Regression
+* Training a machine learning model
+* Making predictions using Scikit-learn
+* Saving and loading ML models using Pickle
+* Connecting a machine learning model with Flask
+* Creating a basic ML web application
