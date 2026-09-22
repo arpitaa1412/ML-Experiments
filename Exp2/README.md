@@ -32,7 +32,7 @@ The main objectives of this project are:
 ## 📂 Project Structure
 
 ```text
-Simple-Linear-Regression/
+Exp2/
 │
 ├── templates/
 │   └── index.html
