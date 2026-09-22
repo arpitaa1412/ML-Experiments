@@ -82,6 +82,7 @@ Binary Classification is a supervised machine learning technique used when the o
 In this project, the model predicts the placement outcome:
 
 Yes → Student is Placed
+
 No  → Student is Not Placed
 
 The model learns the relationship between the input features and the placement outcome from the training data.
