@@ -42,8 +42,9 @@ Exp4/
 ├── BCModel.pkl
 ├── app.py
 └── README.md
+```
 
-📄 File Description
+### 📄 File Description
 
 | File                | Description                               |
 | ---------------     | ----------------------------------------- |
@@ -54,8 +55,8 @@ Exp4/
 | `README.md`         | Project documentation                     |
 
 
-
-🔄 How the Project Works
+### 🔄 How the Project Works
+```text
 
 Placement Dataset
        ↓
@@ -72,6 +73,7 @@ User Enters Input
 Model Makes Prediction
        ↓
 Placement Result Displayed
+```
 
 📈 Binary Classification
 
