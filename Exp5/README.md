@@ -61,7 +61,6 @@ Exp5/
 
 ### 📄 File Description
 
-```text
 | File            | Description                               |
 | --------------- | ----------------------------------------- |
 | `MCModel.pkl`   | Saved trained Logistic Regression model   |
@@ -69,7 +68,6 @@ Exp5/
 | `templates/`    | Contains HTML files for the web interface |
 | `README.md`     | Project documentation                     |
 
-```
 
 ### 🔄 How the Project Works
 ```text
