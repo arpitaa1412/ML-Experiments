@@ -45,14 +45,14 @@ Exp4/
 
 📄 File Description
 
-File / Folder	Description
+| File                | Description                               |
+| ---------------     | ----------------------------------------- |
+| `Placement_Y_N.csv` | Dataset used for training/testing         |
+| `BCModel.pkl`       | Saved trained Binary Classification model |
+| `app.py`            | Flask application for placement prediction|
+| `templates/`        | Contains HTML files for the web interface |
+| `README.md`         | Project documentation                     |
 
-Placement_Y_N.csv	Dataset used for training/testing
-BCModel.pkl	Saved trained Binary Classification model
-app.py	Flask application for placement prediction
-templates/	Contains HTML files for the web interface
-index.html	Web page used to enter input and display output
-README.md	Project documentation
 
 
 🔄 How the Project Works
