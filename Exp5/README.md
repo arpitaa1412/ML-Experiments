@@ -61,14 +61,15 @@ Exp5/
 
 ### 📄 File Description
 
-File / Folder	Description
+```text
+| File            | Description                               |
+| --------------- | ----------------------------------------- |
+| `MCModel.pkl`   | Saved trained Logistic Regression model   |
+| `app.py`        | Flask application for Iris classification |
+| `templates/`    | Contains HTML files for the web interface |
+| `README.md`     | Project documentation                     |
 
-MCModel.pkl	Saved trained Logistic Regression model
-app.py	Flask application for Iris classification
-templates/	Contains HTML files for the web interface
-index.html	Web page used to enter flower measurements and display the prediction
-README.md	Project documentation
-
+```
 
 ### 🔄 How the Project Works
 ```text
