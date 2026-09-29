@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advertising Sales Prediction</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #eeeeee;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📊 Sales Prediction</h1>
+
+        <p>Simple Linear Regression</p>
+
+        <p>Enter TV Advertising Spend</p>
+
+        <form action="/predict" method="POST">
+
+            <input
+                type="number"
+                step="any"
+                name="tv"
+                placeholder="Enter TV advertising amount"
+                required
+            >
+
+            <button type="submit">
+                Predict Sales
+            </button>
+
+        </form>
+
+        {% if prediction is not none %}
+
+        <div class="result">
+
+            <h2>Prediction Result</h2>
+
+            <p>
+                TV Advertising Spend:
+                <strong>{{ tv }}</strong>
+            </p>
+
+            <p>
+                Predicted Sales:
+                <strong>{{ prediction }}</strong>
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
