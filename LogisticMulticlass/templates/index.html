@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glass Type Classification</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 450px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            text-align: center;
+            background: #e8f5e9;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Glass Type Classification</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>RI</label>
+        <input type="number" step="any" name="RI" placeholder="Example: 1.52101" required>
+
+        <label>Na</label>
+        <input type="number" step="any" name="Na" placeholder="Example: 13.64" required>
+
+        <label>Mg</label>
+        <input type="number" step="any" name="Mg" placeholder="Example: 4.49" required>
+
+        <label>Al</label>
+        <input type="number" step="any" name="Al" placeholder="Example: 1.10" required>
+
+        <label>Si</label>
+        <input type="number" step="any" name="Si" placeholder="Example: 71.78" required>
+
+        <label>K</label>
+        <input type="number" step="any" name="K" placeholder="Example: 0.06" required>
+
+        <label>Ca</label>
+        <input type="number" step="any" name="Ca" placeholder="Example: 8.75" required>
+
+        <label>Ba</label>
+        <input type="number" step="any" name="Ba" placeholder="Example: 0.00" required>
+
+        <label>Fe</label>
+        <input type="number" step="any" name="Fe" placeholder="Example: 0.00" required>
+
+        <button type="submit">
+            Predict Glass Type
+        </button>
+
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        {{ prediction }}
+        <br>
+        Class Number: {{ class_number }}
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
