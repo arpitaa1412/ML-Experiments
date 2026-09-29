@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Play Tennis Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎾 Play Tennis Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <label for="outlook">Outlook</label>
+            <select name="outlook" id="outlook" required>
+                <option value="">Select Outlook</option>
+                <option value="sunny">Sunny</option>
+                <option value="overcast">Overcast</option>
+                <option value="rainy">Rainy</option>
+            </select>
+
+            <label for="temp">Temperature</label>
+            <select name="temp" id="temp" required>
+                <option value="">Select Temperature</option>
+                <option value="hot">Hot</option>
+                <option value="mild">Mild</option>
+                <option value="cool">Cool</option>
+            </select>
+
+            <label for="humidity">Humidity</label>
+            <select name="humidity" id="humidity" required>
+                <option value="">Select Humidity</option>
+                <option value="high">High</option>
+                <option value="normal">Normal</option>
+            </select>
+
+            <label for="windy">Windy</label>
+            <select name="windy" id="windy" required>
+                <option value="">Select Windy</option>
+                <option value="True">True</option>
+                <option value="False">False</option>
+            </select>
+
+            <button type="submit">Predict</button>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            {{ prediction }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
+
