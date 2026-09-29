@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Social Network Ads Prediction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Purchase Prediction</h1>
+
+        <form action="/predict" method="POST">
+
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Enter age"
+                min="1"
+                required
+            >
+
+            <label for="salary">Estimated Salary</label>
+            <input
+                type="number"
+                id="salary"
+                name="salary"
+                placeholder="Enter estimated salary"
+                min="0"
+                required
+            >
+
+            <button type="submit">
+                Predict
+            </button>
+
+        </form>
+
+        {% if prediction %}
+
+        <div class="result">
+
+            <h3>Prediction Result</h3>
+
+            <p>{{ prediction }}</p>
+
+            {% if probability %}
+            <p>
+                Purchase Probability: <strong>{{ probability }}%</strong>
+            </p>
+            {% endif %}
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
